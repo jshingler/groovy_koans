@@ -1,0 +1,7 @@
+.DS_Store
+groovy-koans.ipr
+groovy-koans.iws
+groovy-koans.iml
+.classpath
+.project
+target
