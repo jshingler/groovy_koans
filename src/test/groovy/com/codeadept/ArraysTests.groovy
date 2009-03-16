@@ -90,6 +90,30 @@ public class ArraysTests extends GroovyTestCase {
     assert [__] == array
   }
 
-  
+  void testParallelAssignment() {
+    def (x, y) = [1, 2]
+
+    assert x == __
+    assert y == __
+
+    (x, y) = [y, x]
+
+    assert x == __
+    assert y == __
+  }
+
+  void testParallelAssignmentWithNotEnoughElements() {
+    def (x, y) = [1]
+
+    assert x == __
+    assert y == __
+  }
+
+  void testParallelAssignmentWithTooManyElements() {
+    def (x, y) = [1, 2, 3, 4]
+
+    assert x == __
+    assert y == __
+  }
 
 }
